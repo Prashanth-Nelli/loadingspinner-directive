@@ -6,7 +6,6 @@ download spinner.js file and include spinner as a dependency in module definitio
 Example Code:-
 ================================================
 
-<pre>
     http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js
     spinner.js
       angular.module('app',['spinner']).controller(['$scope',function($scope){
@@ -25,4 +24,3 @@ Example Code:-
     <button ng-click="toggle">toggle spinner</button>
     
     </div>
-</pre>

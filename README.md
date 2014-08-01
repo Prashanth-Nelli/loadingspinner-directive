@@ -27,11 +27,11 @@ Example Code:-
       }]);
       
     <div ng-app="app">
-      <div spinner id="'spinner'" properties="properties">
+      <div spinner id="'spinner'" properties="properties" start="show">
       
       </div>
     </div>
-    <button ng-click="toggle">toggle spinner</button>
+    <button ng-click="toggle()">toggle spinner</button>
     
     directive id should be unique when this directive used multiple times,
     propeties is an object it is optional if it not available default values will be used 

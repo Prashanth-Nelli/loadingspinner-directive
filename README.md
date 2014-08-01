@@ -3,29 +3,26 @@ loadingspinner-directive
 
 download spinner.js file and include spinner as a dependency in module definition
 
+Example Code:-
+================================================
 
 <pre>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.4/angular.min.js"></script>
-<script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
-<script src="spinner.js"></script>
-<script>
-  angular.module('app',['spinner']).controller(['$scope',function($scope){
+    http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js
+    spinner.js
+      angular.module('app',['spinner']).controller(['$scope',function($scope){
+        $scope.show = true;
+        $scope.toggle=function(){
+          $scope.show=!$scope.show;
+        };
+      }]);  	
     
-    $scope.show = true;
+    <div ng-app="app">
+      <div spinner >
+      
+      </div>
+    </div>  
     
-    $scope.toggle=function(){
-      $scope.show=!$scope.show;
-    };
+    <button ng-click="toggle">toggle spinner</button>
     
-  }]);  	
-</script>
-
-<div ng-app="app">
-  <div spinner >
-  
-  </div>
-</div>  
-
-<button ng-click="toggle">toggle spinner</button>
-
+    </div>
 </pre>

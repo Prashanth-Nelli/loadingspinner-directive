@@ -15,14 +15,24 @@ Example Code:-
         $scope.toggle=function(){
           $scope.show=!$scope.show;
         };
-      }]);  	
-    
+        
+        $scope.properties = {
+    		setColor : '#ffffff',
+    		setDiameter : 75,
+    		setDensity : 40,
+    		setRange : 0.5,
+    		setFPS : 30
+    	};
+        
+      }]);
+      
     <div ng-app="app">
-      <div spinner >
+      <div spinner name="'spinner'" properties="properties">
       
       </div>
-    </div>  
-    
+    </div>
     <button ng-click="toggle">toggle spinner</button>
     
-    </div>
+    directive name property should be unique when this directive used multiple times,
+    propeties is an object it is optional if it not available default values will be used 
+

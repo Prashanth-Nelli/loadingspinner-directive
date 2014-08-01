@@ -1,0 +1,46 @@
+<html ng-app="spinnerapp">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.4/angular.min.js"></script>
+		<script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+		<script src="../spinner.js"></script>
+		<script>
+			angular.module('spinnerapp', ['spinner']).controller('spinnerCtrl', ['$scope',
+			function($scope) {
+				$scope.show = true;
+				$scope.toggle = function() {
+					$scope.show = !$scope.show;
+				};
+
+				$scope.properties = {
+					setColor : '#000000',
+					setDiameter : 75,
+					setDensity : 40,
+					setRange : 0.5,
+					setFPS : 30
+				};
+
+				$scope.spinner1 = false;
+				$scope.spinner2 = false;
+
+				$scope.toggle = function() {
+					$scope.spinner1 = !$scope.spinner1;
+					$scope.spinner2 = !$scope.spinner2;
+				}
+			}]);
+
+		</script>
+	</head>
+	<body ng-controller="spinnerCtrl">
+
+		<div spinner id="'spinner1'" properties="properties" start="spinner1">
+
+		</div>
+
+		<div spinner id="'spinner2'" start="spinner2">
+
+		</div>
+
+		<button ng-click="toggle()">Toggle</button>
+
+	</body>
+</html>

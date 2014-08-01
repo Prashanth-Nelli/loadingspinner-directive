@@ -3,17 +3,16 @@ return {
 	restrict : 'A',
 	scope : {
 		start : '=',
-		name : '=',
+		id : '=',
 		properties : '='
 	},
 	template : '<div class="wrapper" ></div>',
-	link : function(scope, element, iAttrs) {
-		$(element).attr('id', scope.name);
-		var cl = new CanvasLoader(scope.name)
+	link : function(scope, element, attrs) {
+		var cl = new CanvasLoader(attrs.id)
 		,props = ['setColor', 'setDiameter', 'setDensity', 'setRange', 'setFPS']
 		,key
 		,defaultProperties = {
-			setColor : '#ffffff',
+			setColor : '#000000',
 			setDiameter : 75,
 			setDensity : 40,
 			setRange : 0.5,

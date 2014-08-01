@@ -1,7 +1,13 @@
 loadingspinner-directive
 ========================
+
+download spinner.js file and include spinner as a dependency in module definition
+
+
+<pre>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.4/angular.min.js"></script>
 <script src="http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js"></script>
+<script src="spinner.js"></script>
 <script>
   angular.module('app',['spinner']).controller(['$scope',function($scope){
     
@@ -12,7 +18,6 @@ loadingspinner-directive
     };
     
   }]);  	
-    
 </script>
 
 <div ng-app="app">
@@ -22,3 +27,5 @@ loadingspinner-directive
 </div>  
 
 <button ng-click="toggle">toggle spinner</button>
+
+</pre>

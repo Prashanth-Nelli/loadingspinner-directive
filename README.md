@@ -3,8 +3,9 @@ loadingspinner-directive
 
 download spinner.js file and include spinner as a dependency in module definition
 
-Example Code:-
-================================================
+###Example Code:-
+
+```javascript
 
     add spinner.js,
         http://heartcode-canvasloader.googlecode.com/files/heartcode-canvasloader-min-0.9.1.js
@@ -26,6 +27,7 @@ Example Code:-
         
       }]);
       
+```
     <div ng-app="app">
       <div spinner id="'spinner'" properties="properties" start="show">
       
@@ -35,4 +37,3 @@ Example Code:-
     
     directive id should be unique when this directive used multiple times,
     propeties is an object it is optional if it not available default values will be used 
-
